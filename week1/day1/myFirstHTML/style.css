@@ -1,0 +1,59 @@
+.highlight {
+    background-color: yellow;
+}
+
+body {
+    font-size: 18px;
+}
+img {
+    width: 300px;
+    margin: auto;
+    display: block;
+    border: 10px solid darkorange;
+}
+
+h3 {
+    text-decoration: underline;
+}
+
+h4 {
+    border: 1px solid red;
+    text-align: center;
+    color: red;
+    display: block;
+    width: 1375px;
+    margin: 20px auto;
+}
+
+#media {
+    text-align: center;
+}
+
+#catSenses {
+    list-style-position: inside ;
+    text-indent: 55px;
+}
+
+.romanCaps {
+    list-style: upper-roman;
+}
+
+table {
+    margin: auto;
+}
+
+td, th {
+    border: 1px solid black;
+    text-align: center;
+    margin: 1px;
+}
+
+th {
+    font-weight: bold;
+}
+
+td {
+    height: 60px;
+    padding: 8px;
+}
+
