@@ -1,0 +1,118 @@
+header, main, footer {
+    border: 1px solid white;
+}
+
+button {
+    background-color: #0C76DD;
+    color: white;
+    border-radius: 5px;
+    padding: 8px;
+    border: none;
+}
+
+
+header {
+    height: 50px;
+    position: relative;
+}
+
+#startBS {
+    position: absolute;
+    left :120px;
+    text-decoration-line: none;
+    color:  darkgrey;
+    font-family: "Arial";
+}
+
+#startBS a:link { text-decoration: none;     color: darkgrey;}
+
+
+#startBS a:visited { text-decoration: none;     color: darkgrey;}
+
+
+#startBS a:hover { text-decoration: none;     color:  darkgrey;}
+
+
+#startBS a:active { text-decoration: none;     color:  darkgrey;}
+
+#signIn {
+    position: absolute;
+    right: 50px;
+    top: 10px;
+}
+
+
+main {
+    background-image: url('https://images.pexels.com/photos/691858/pexels-photo-691858.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+}
+
+#middleBox {
+    /* border: 2px solid green; */
+    display: block;
+    width: 800px;
+    height: 300px;
+    margin: 100px auto;
+}
+
+#message{
+    color: white;
+    font-size: 44px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+}
+
+#signUpDiv {
+    display: block;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    width: 800px;
+}
+
+#email{
+    width:420px;
+    margin-right: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+#signUpBtn {
+    width: 150px;
+    font-size: 12px;
+}
+
+
+.bottomSquaresInfo {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: inline-block;
+    padding: 16px;
+    margin: 8px 20px;
+    width: 220px;
+}
+
+h1 {
+    font-size: 16px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 12px;
+    text-align: center;
+}
+
+.icons {
+    font-size: 5em;
+    color: #0C76DD;
+    display: block;
+    text-align: center;
+}
+
+#bottomBoxes {
+    display: flex;
+    margin-top: 60px;
+    justify-content: center;
+}
