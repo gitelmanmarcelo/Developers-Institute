@@ -1,41 +1,31 @@
+for (let i=0; i<=15; i++){
+    if (i%2)
+        console.log(i + ' is even');
+    else
+        console.log(i + ' is odd');
+}
 
 
-// EXERCISE 1
-let addressNumber = 19;
-let addressStreet = 'shmurat';
-let country = 'Israel';
+const prices = [23, 15, 34, 10];
 
-let globalAdress = 'I live in ' + addressStreet + ', ' + addressNumber + ', in ' + country;
+// Create a variable sum equals to 0
+// Loop over this array, to get the sum of all the numbers
+// Where should you console log the sum ?
 
-console.log(globalAdress);
+let sum = 0;
 
+for (let i=0; i <prices.length; i++){
+    sum += prices[i];
+}
 
-// EXERCISE 2
-let birthYear = 1975;
-let currYear = 2023;
+console.log(sum);
 
-console.log('I will be ' + (currYear-birthYear).toString() + " this year.");
+function f(item){
+    console.log('callback function' + item);
+}
 
-// EXERCISE 3
-let pets = ['cat','dog','fish','rabbit','cow'];
+prices.forEach(a => {console.log('arrow function ' + a); });
 
-console.log(pets[1]);
+prices.forEach(f);
 
-pets.splice(3,1,'horse');
-
-console.log(pets);
-console.log(pets.length);
-
-// ALERT - message + ok
-alert("Hello");
-
-// PROMPT - message + input + ok + cancel
-// RETURNS THE INPUT IDBCursorWithValue
-// IF ESC or CANCEL RETURNS null
-let result = prompt('How old are you?',20);
-alert(result);
-
-// CONFIRM - message + Ok + cancel
-// IF OK returns true otherwise returns false
-result = confirm('Are you sure?');
-alert(result);
+prices.forEach(function(a) {console.log('inline callback function' + a); });
