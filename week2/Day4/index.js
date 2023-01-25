@@ -1,41 +1,74 @@
+function calcAges(myAge){
+    console.log('My mum is ' + 2*myAge + 'years.');
+    console.log('My dad is ' + 2.4*myAge + 'years.');
+}
+
+calcAges(12);
+
+function calcAges2(myAge){
+    return 2*myAge;
+}
+
+console.log('My mum is ' + calcAges2(12) + 'years.');
+
+// Exercise 1
+// You are the manager of the chocolate factory, in order to make your clients happy you will send them a gift depending on their quantity of chocolate box they ordered.
+
+// Create a function named checkQuantityOrder, that takes one parameter, the quantity the user ordered.
+
+// If the client ordered more between 5 and 10 boxes (included) 
+// console.log "Dear client, you won a bouquet of flowers"
+// If the client ordered more between 10 and 20 boxes (included)
+//  console.log "Dear client, you won a bottle of wine"
+// If the client ordered more than 20 boxes (included) 
+// console.log "Dear client, you won a trip to Paris"
+// Call the function a few times,
+
+function checkQuantityOrder(quant) {
+    if (quant >= 5 && quant <= 10)
+        console.log("Dear client, you won a bouquet of flowers");
+    else if (quant >10 && quant <= 20)
+        console.log("Dear client, you won a bottle of wine");
+    else if (quant > 20)
+    console.log("Dear client, you won a trip to Paris");
+}
+
+checkQuantityOrder(8);
+checkQuantityOrder(15);
+checkQuantityOrder(30);
+
+// BONUS : add a parameter to the function, the name of the client. 
+// If you don't know the name of the client, call him/her "client"
+
+// If the client ordered more between 5 and 10 boxes (included) console.log "Dear <name_client>, you won a bouquet of flowers"
+// If the client ordered more between 10 and 20 boxes (included) console.log "Dear <name_client>, you won a bottle of wine"
+// If the client ordered more than 20 boxes (included) console.log "Dear <name_client>, you won a trip to Paris"
+// Call the function a few times,
+
+function checkQuantityOrder(quant, name='client') {
+    if (quant >= 5 && quant <= 10)
+        console.log("Dear " + name + ", you won a bouquet of flowers");
+    else if (quant >10 && quant <= 20)
+        console.log("Dear " + name + ", you won a bottle of wine");
+    else if (quant > 20)
+    console.log("Dear " + name + ", you won a trip to Paris");
+}
 
 
-// EXERCISE 1
-let addressNumber = 19;
-let addressStreet = 'shmurat';
-let country = 'Israel';
-
-let globalAdress = 'I live in ' + addressStreet + ', ' + addressNumber + ', in ' + country;
-
-console.log(globalAdress);
+checkQuantityOrder(8, "John");
+checkQuantityOrder(15);
+checkQuantityOrder(30, "David");
 
 
-// EXERCISE 2
-let birthYear = 1975;
-let currYear = 2023;
 
-console.log('I will be ' + (currYear-birthYear).toString() + " this year.");
 
-// EXERCISE 3
-let pets = ['cat','dog','fish','rabbit','cow'];
 
-console.log(pets[1]);
 
-pets.splice(3,1,'horse');
 
-console.log(pets);
-console.log(pets.length);
 
-// ALERT - message + ok
-alert("Hello");
 
-// PROMPT - message + input + ok + cancel
-// RETURNS THE INPUT IDBCursorWithValue
-// IF ESC or CANCEL RETURNS null
-let result = prompt('How old are you?',20);
-alert(result);
 
-// CONFIRM - message + Ok + cancel
-// IF OK returns true otherwise returns false
-result = confirm('Are you sure?');
-alert(result);
+
+
+
+

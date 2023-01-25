@@ -234,7 +234,7 @@ function planeRideCost() {
     else
         return 300;
 }
-console.log(planeRideCost());
+
 // Define a function called rentalCarCost().
 // It should ask the user for the number of days they would like to rent the car.
 // If the user doesn’t answer or if the answer is not a number, ask again.
@@ -242,10 +242,78 @@ console.log(planeRideCost());
 // If the user rents a car for more than 10 days, they get a 5% discount.
 // The function should return the total price of the car rental.
 
-// Define a function called totalVacationCost() that returns the total cost of the user’s vacation by calling the 3 functions that you created above.
+function rentalCarCost() {
+    let rentalDays;
+    do {
+        rentalDays = Number(prompt('Rental days:'));
+    } while (isNaN(rentalDays));
+    if (rentalDays > 10)
+        return 40*rentalDays*0.95;
+    else
+        return 40*rentalDays;
+}
+
+// Define a function called totalVacationCost() that returns the total cost of the user’s vacation by calling
+//  the 3 functions that you created above.
 // Example : The car cost: $x, the hotel cost: $y, the plane tickets cost: $z.
-// Hint: You have to call the functions hotelCost(), planeRideCost() and rentalCarCost() inside the function totalVacationCost().
+// Hint: You have to call the functions hotelCost(), planeRideCost() and rentalCarCost() inside the 
+// function totalVacationCost().
+
+function totalVacationCost() {
+    let totalCost = 0;
+
+    totalCost += hotelCost();
+    totalCost += planeRideCost();
+    totalCost += rentalCarCost();
+    return totalCost;
+}
 
 // Call the function totalVacationCost()
+console.log(totalVacationCost());
 
-// Bonus: Instead of using a prompt inside the 3 first functions, only use a prompt inside the totalVacationCost() function. You need to change the 3 first functions, accordingly.
+
+// Bonus: Instead of using a prompt inside the 3 first functions, only use a prompt inside the
+//  totalVacationCost() function. You need to change the 3 first functions, accordingly.
+
+function hotelCost2(numNights) {
+    return 140*numNights;
+}
+
+function planeRideCost2(destination) {
+    if (destination == 'london')
+        return 183;
+    else if (destination == 'paris')
+        return 220;
+    else
+        return 300;
+}
+
+function rentalCarCost2(rentalDays) {
+    if (rentalDays > 10)
+        return 40*rentalDays*0.95;
+    else
+        return 40*rentalDays;
+}
+
+function totalVacationCost2() {
+    let totalCost = 0;
+
+    let numNights;
+    do {
+        numNights = Number(prompt('Number of nights:'));
+    } while (isNaN(numNights));
+    totalCost += hotelCost2(numNights);
+    let destination;
+    do {
+        destination = prompt('Destination:').toLocaleLowerCase();
+    } while (!isNaN(Number(destination)));
+    totalCost += planeRideCost2(destination);
+    let rentalDays;
+    do {
+        rentalDays = Number(prompt('Rental days:'));
+    } while (isNaN(rentalDays));
+    totalCost += rentalCarCost2(rentalDays);
+    return totalCost;
+}
+
+console.log(totalVacationCost2());
