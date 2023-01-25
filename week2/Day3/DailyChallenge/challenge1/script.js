@@ -9,16 +9,14 @@
 // * * * * *
 // * * * * * *
 
-let star='*';
 for (let i=1; i<=6; i++){
-    console.log(star.repeat(i));
+    console.log('*'.repeat(i));
 }
 
-let ans='';
 for (let i=1; i<=6; i++){
-    ans = '';
-    for (times=1; times <= i; times++) {
-        ans += '*';
+    let ans = '';
+    for (let times=1; times <= i; times++) {
+        ans = ans + '*';
     }
     console.log(ans);
 }
