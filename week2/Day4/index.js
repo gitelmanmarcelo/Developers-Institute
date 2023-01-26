@@ -28,7 +28,6 @@ function checkQuantityOrder(quant) {
     if (quant >= 5 && quant <= 10)
         console.log("Dear client, you won a bouquet of flowers");
     else if (quant >10 && quant <= 20)
-        console.log("Dear client, you won a bottle of wine");
     else if (quant > 20)
     console.log("Dear client, you won a trip to Paris");
 }
@@ -53,7 +52,6 @@ function checkQuantityOrder(quant, name='client') {
     else if (quant > 20)
     console.log("Dear " + name + ", you won a trip to Paris");
 }
-
 
 checkQuantityOrder(8, "John");
 checkQuantityOrder(15);

@@ -1,0 +1,44 @@
+* {
+    font-size: 1.7rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#frame {
+    width: 42vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: lightskyblue;
+    margin: 2rem;
+  
+}
+
+#screen {
+    height: 10vh;
+    width: 99%;
+    background-color: rgb(181, 181, 181);
+    color: black
+}
+
+input {
+    text-align: right;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0.2rem;
+}
+
+.button {
+    width: 10vw;
+    height: 10vh;
+    background-color: lightgreen;
+}
+
+.commandBtn {
+    width: 20.5vw;
+    height: 10vh;
+    background-color: lightgreen;
+}
