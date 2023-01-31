@@ -40,7 +40,7 @@ function libFn(e) {
 
     let words = extractWords();
 
-    document.querySelector('#story').textContent =  words.join(" ");
+    document.querySelector('#story').textContent =  'How is it possible that ' + words[2] + ' ' + words[3] + ' in ' + words[4] + ' using a ' + words[0] + ' and thought it was ' + words[1];
 }
 
 function shuffleFn(e) {
@@ -48,7 +48,7 @@ function shuffleFn(e) {
 
     let words = extractWords();
     shuffle(words);
-    document.querySelector('#story').textContent =  words.join(" ");
+    document.querySelector('#story').textContent =  'How is it possible that ' + words[2] + ' ' + words[3] + ' in ' + words[4] + ' using a ' + words[0] + ' and thought it was ' + words[1];
 }
 
 function shuffle(array) {
