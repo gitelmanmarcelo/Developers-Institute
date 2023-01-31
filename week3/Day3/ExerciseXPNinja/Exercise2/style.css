@@ -1,0 +1,29 @@
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+div {
+    width: 300px;
+    border: solid 1px black;
+    text-align: right;
+    font-size: 3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#circle {
+    margin-top: 40vh;
+}
+
+#loading2 {
+    display: flex;
+
+}
+
+loading2 div {
+    display: none;
+}
