@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
+
+}
+
+body {
+    background-color: rgb(255, 0, 85);
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content:space-around; */
+    align-items:center;
+    margin-top: 10vh;
+}
+
+form {
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+}
+
+.newTask {
+    padding: 5px;
+}
+
+#inputTask {
+    width: 15vw;
+    height: 1.7rem;
+}
+
+i {
+    color: black;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.listTasks {
+    background-color: white;
+}
+
+label {
+    margin-left: 5px;
+    
+}
+
+.taskItem {
+    border-bottom: 1px solid rgb(255, 0, 85);
+    width: 15vw;
+    height: 1.7rem;
+
+}
