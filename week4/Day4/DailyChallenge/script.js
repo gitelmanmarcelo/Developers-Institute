@@ -43,7 +43,6 @@ const videoLib = [ {title: 'Spiderman', uploader: 'Clark Kent', time: 150},
 
 const video = [];
 videoLib.forEach( (elem,index) => {
-    // const {title,uploader,time} = videoLib[index];
     video[index] = new Video(videoLib[index]);
 })
 

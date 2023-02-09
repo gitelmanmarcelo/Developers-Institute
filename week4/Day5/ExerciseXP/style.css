@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: solid 1px black; */
+    font-family: 'Roboto Mono', monospace;
+}
+
+header {
+    background-color:rgb(157, 157, 157);
+    display: flex;
+    height: 10vh;
+    align-items: center;
+}
+
+#title p {
+    padding: 10px;
+    font-size: 2rem;
+    margin-left: 2rem;
+    font-family: 'Press Start 2P', cursive;
+    color: grey;
+    background-color: antiquewhite;  
+    border-radius: 20px; 
+    border: grey 2px solid;
+}
+
+#searchBox input {
+    height: 2.5rem;
+    width: 50vw;
+    font-size: 1.5rem;
+    border: solid 3px grey;
+    margin-left: 3rem;
+    border-radius: 10px;
+}
+
+
+main {
+    background-image: url('electronic-board.jpg');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#card-collection {
+    height: 300vh;
+    width: 90vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 36px;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.card {
+    display: flex;
+    padding: 8px;
+    height : 70vh;
+    width : 25vw;
+    background-color: red;
+    border-radius: 25px;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgb(200, 199, 199);
+}
+
+.card img {
+    width: 80%;
+    border-radius: 500px;
+    margin-top: 5px;
+    margin-left: 40px;
+    background-color: antiquewhite;
+}
+
+.robotName {
+    font-size: 1.5rem;
+    margin-top: 10vh;
+}
+
+.robotEmail {
+    font-size: 1.2rem;
+    margin-top: 1vh;
+}
+
+
