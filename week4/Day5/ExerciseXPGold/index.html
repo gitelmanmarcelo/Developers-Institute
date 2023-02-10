@@ -12,17 +12,18 @@
         <div id="msg">
             <h1>Choose your team:</h1>
             <button id="xBtn" class="symbolBtn" onclick="onXClick()">X</button>
+            <h1 id="or">OR</h1>
             <button id="oBtn" class="symbolBtn" onclick="onOClick()">O</button>
         </div>
         <div id="level">
             <p>Difficulty level:</p>
             <div class="lbl">
-                <input type="radio" name="diff" id="easyRadio" value="Easy" checked>
-                <label for="easyRadio">Easy</label>
+                <input type="radio" name="diff" id="easyRadio" onclick="onEasyClick()" value="Easy" checked>
+                <label for="easyRadio" onclick="onEasyClick()">Easy</label>
             </div>
             <div class="lbl">
-                <input type="radio" name="diff" id="hardRadio" value="Hard">
-                <label for="hardRadio">Hard</label>
+                <input type="radio" name="diff" id="hardRadio" onclick="onHardClick()" value="Hard">
+                <label for="hardRadio" onclick="onHardClick()">Hard</label>
             </div>
         </div>
     </div>
@@ -37,9 +38,9 @@
         <div id="sq7" class="sq rightBorder "></div>
         <div id="sq8" class="sq"></div>
     </div>
-    <div id="footer">
+    <footer>
         <button id="restartBtn" onClick="onRestartClick()">RESTART</button>
-    </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
