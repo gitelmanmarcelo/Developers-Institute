@@ -9,25 +9,36 @@
 </head>
 <body>
     <div id="choose">
-        <h1>Choose your team:</h1>
-        <div>
-            <button id="xBtn" onclick="onXClick()">X</button>
-            <button id="oBtn" onclick="onOClick()">O</button>
+        <div id="msg">
+            <h1>Choose your team:</h1>
+            <button id="xBtn" class="symbolBtn" onclick="onXClick()">X</button>
+            <button id="oBtn" class="symbolBtn" onclick="onOClick()">O</button>
+        </div>
+        <div id="level">
+            <p>Difficulty level:</p>
+            <div class="lbl">
+                <input type="radio" name="diff" id="easyRadio" value="Easy" checked>
+                <label for="easyRadio">Easy</label>
+            </div>
+            <div class="lbl">
+                <input type="radio" name="diff" id="hardRadio" value="Hard">
+                <label for="hardRadio">Hard</label>
+            </div>
         </div>
     </div>
     <div id="board">
-        <div id="sq1" class="sq"></div>
-        <div id="sq2" class="sq"></div>
-        <div id="sq3" class="sq"></div>
-        <div id="sq4" class="sq"></div>
-        <div id="sq5" class="sq"></div>
-        <div id="sq6" class="sq"></div>
-        <div id="sq7" class="sq"></div>
+        <div id="sq0" class="sq rightBorder btmBorder "></div>
+        <div id="sq1" class="sq rightBorder btmBorder "></div>
+        <div id="sq2" class="sq btmBorder "></div>
+        <div id="sq3" class="sq rightBorder btmBorder "></div>
+        <div id="sq4" class="sq rightBorder btmBorder "></div>
+        <div id="sq5" class="sq btmBorder "></div>
+        <div id="sq6" class="sq rightBorder "></div>
+        <div id="sq7" class="sq rightBorder "></div>
         <div id="sq8" class="sq"></div>
-        <div id="sq9" class="sq"></div>
     </div>
     <div id="footer">
-        <button id="restartBtn">RESTART</button>
+        <button id="restartBtn" onClick="onRestartClick()">RESTART</button>
     </div>
     <script src="script.js"></script>
 </body>
