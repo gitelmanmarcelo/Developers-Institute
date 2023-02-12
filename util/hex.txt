@@ -1,0 +1,64 @@
+// Question 3:
+// Write a function that converts HEX to RGB.
+
+// Then Make that function auto-detect the formats so that if you enter HEX color format it returns RGB 
+// and if you enter RGB color format it returns HEX.
+
+
+console.log(hexRgbConvert('#F07AE3'))  // '(240,122,227)'
+console.log(hexRgbConvert('(240,122,227)'))  // '#F07AE3'
+
+function hexRgbConvert(input) {
+    if (input.slice(0,1) === '#') {   // input is in HEX
+        return '(' + hex2num(input.slice(1,3)) + ',' + hex2num(input.slice(3,5)) + ',' 
+                    + hex2num(input.slice(5,7)) + ')';
+    }
+    else {   // input is in RGB
+        let ans = input.slice(1,-1).split(',');
+        ans[0] = dec2hex(Number(ans[0]));
+        ans[1] = dec2hex(Number(ans[1]));
+        ans[2] = dec2hex(Number(ans[2]));
+        return '#' + ans[0] + ans[1] + ans[2];
+    }  
+}
+
+function dec2hex(dec) {
+    if (dec > 255)
+        return -1;
+    let ans = '';
+    if (Math.floor(dec/16) < 10)
+        ans += Math.floor(dec/16).toString();
+    else
+        ans += String.fromCharCode(Math.floor(dec/16).toString() -10 + 65);
+        if ((dec%16) < 10)
+        ans += (dec%16).toString();
+    else
+        ans += String.fromCharCode((dec%16).toString() -10 + 65);  
+    return ans;
+}
+
+function hex2num(hex) {
+    ans = 0;
+    if (hex.length !== 2)
+        return -1;
+    if (isNaN(hex.slice(1,2))) {
+        if (hex.slice(1,2).toLowerCase().charCodeAt(0) < 97 ||
+        hex.slice(1,2).toLowerCase().charCodeAt(0) > 102)
+            return -1;
+        ans += 10 - 97 + hex.slice(1,2).toLowerCase().charCodeAt(0);
+    }  
+    else {  // IS A NUMBER NOT A LETTER
+        ans += Number(hex.slice(1,2));
+    }  
+    // MOST SIGNIFICANT DIGIT
+    if (isNaN(hex.slice(0,1))) {
+        if (hex.slice(0,1).toLowerCase().charCodeAt(0) < 97 ||
+        hex.slice(0,1).toLowerCase().charCodeAt(0) > 102)
+            return -1;
+        ans += 16* ( 10 + hex.slice(0,1).toLowerCase().charCodeAt(0) - 97);
+    }  
+    else {  // IS A NUMBER NOT A LETTER
+        ans += Number(hex.slice(0,1))*16;
+    }
+    return ans;  
+}
