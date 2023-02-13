@@ -34,25 +34,21 @@ function getData() {
         else {
             const data = JSON.parse(xhr.response);
             const div = document.createElement('div');
+            div.style.width = '160px';
+            div.style.display = 'flex';
+            div.style.flexDirection = 'Column'
+            div.style.margin = '10px';
             const img = document.createElement('img');
             img.src = data.data[0].images.downsized_medium.url;
+            img.style.width = '100%'
             const delBtn = document.createElement('button');
-            const icon = document.createElement('i');
-            icon.classList.add('fa-regular');
-            icon.classList.add('fa-trash-can');
-            delBtn.appendChild(icon);
+            delBtn.textContent = 'DELETE GIF';
             delBtn.addEventListener('click',onClickDelete);
-            icon.addEventListener('click',onClickIcon);
             div.appendChild(img);
             div.appendChild(delBtn);
             document.querySelector('main').appendChild(div);
         }
 }
-}
-
-function onClickIcon(evt) {
-    const div = evt.target.parentElement.parentElement;
-    div.parentElement.removeChild(div);
 }
 
 function onClickDelete(evt) {

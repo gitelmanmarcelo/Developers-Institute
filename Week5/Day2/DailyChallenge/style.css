@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1rem;
+    background-color: #8E5E36;
+    color: #33281F;
+}
+
+form {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    border-bottom: 2px solid #33281F;
+    font-weight: bold;
+}
+
+form button {
+    margin-left: 1rem;
+    background-color: #F57C18;
+    border: none;
+    padding: 6px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+form label {
+    margin-right: 4px;
+}
+
+form input {
+    background-color: antiquewhite;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  
+  main {
+    margin-top: 9vh;
+    display: flex; 
+    flex-wrap: wrap;
+  }
+
+  div {
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    }
+
+    img {
+        width: 100%;
+    }
+ 
+    div button {
+        background-color: #F57C18;
+    }
+
+    i {
+        color: black;
+        background-color: #F57C18;
+
+    }
