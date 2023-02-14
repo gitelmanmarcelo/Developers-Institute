@@ -1,0 +1,17 @@
+function job(callback1, callback2) {
+    setTimeout(callback1,2000);
+
+    setTimeout(function() 
+        {   callback2();
+            setTimeout(function() {
+                callback2();
+                setTimeout( callback2,1000);
+                },1000)
+            },1000);
+}
+
+module.exports = job;
+
+callback1 after 2 seconds
+
+callback2 after 1 second, after 2 seconds & after 3 seconds

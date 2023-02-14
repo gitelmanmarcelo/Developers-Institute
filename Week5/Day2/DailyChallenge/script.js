@@ -22,8 +22,8 @@ function getData() {
 
     const xhr = new XMLHttpRequest();
 
-    xhr.open("GET", "https://api.giphy.com/v1/gifs/search?q=" + document.forms[0].category.value + 
-    "&offset=" + Math.floor(Math.random() * 1000).toString() + "&limit=1&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My");
+    xhr.open("GET", "https://api.giphy.com/v1/gifs/random?tag=" + 
+    document.forms[0].category.value + "&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My");
 
     xhr.send();
 
@@ -35,28 +35,26 @@ function getData() {
             const data = JSON.parse(xhr.response);
             const div = document.createElement('div');
             const img = document.createElement('img');
-            img.src = data.data[0].images.downsized_medium.url;
+            img.src = data.data.images.downsized_medium.url;
             const delBtn = document.createElement('button');
             const icon = document.createElement('i');
-            icon.classList.add('fa-regular');
-            icon.classList.add('fa-trash-can');
+            icon.classList.add('fa-regular','fa-trash-can');
             delBtn.appendChild(icon);
             delBtn.addEventListener('click',onClickDelete);
-            icon.addEventListener('click',onClickIcon);
             div.appendChild(img);
             div.appendChild(delBtn);
             document.querySelector('main').appendChild(div);
         }
-}
-}
-
-function onClickIcon(evt) {
-    const div = evt.target.parentElement.parentElement;
-    div.parentElement.removeChild(div);
+    }
 }
 
 function onClickDelete(evt) {
-    const div = evt.target.parentElement;
+    console.log(evt);
+    let div;
+    if (evt.target.localName == "i")
+        div = evt.target.parentElement.parentElement;
+    else
+        div = evt.target.parentElement;
     div.parentElement.removeChild(div);
 
 }
