@@ -25,3 +25,4 @@ Promise.all(urls.map(url => fetch(url)))
 //   Part II
 
 //   Change one of the urls in the array provided above. This should cause an error. Make sure your catch block works.
+
