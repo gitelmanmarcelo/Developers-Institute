@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image  : url('https://media3.giphy.com/media/aRZ4vTsHnyW6A/giphy.webp?cid=ecf05e4797yvm9ef0xtcps76386fp62lk5qb6rm3wh798t0e&rid=giphy.webp&ct=g');
+    /* background-image  : url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2RjMDcwYjVhYzZlM2VjMjZjMTc3ZDRlMzIzZjU4ZWEyZDA3ZTcxMSZjdD1n/l0K4lUxBzIOeJd1EA/giphy.gif'); */
+    /* background-image  : url('https://media.giphy.com/media/eHdZZgmLheaqRT6kVX/giphy.gif'); */
+    background-Repeat  : no-repeat;
+    background-Size : cover;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    border: 3px solid green;
+
+}
+
+i {
+    font-size: 10rem;
+    color: yellow;
+}
+
+#title {
+    margin-top: 0;
+    width: 30vw;
+}
+
+img {
+    width: 100%;
+}
+
+#bigRectangle img {
+    width: 75%;
+}
+
+#bigRectangle {
+    border: 6px solid yellow;
+    border-radius: 5%;
+    width: 30vw;
+    height: 40vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+}
+
+#bigRectangle p {
+    font-size: 1.2rem;
+
+}
+
+#bigRectangle p:first-of-type{
+    font-size: 2rem;
+
+}
+
+button {
+    margin-top: 3vh;
+    height: 6vh;
+    width: 20vw;
+}

@@ -88,7 +88,7 @@ const wordGif = async () => {
     if (res.status >= 300)
         throw new Error("bad status");
     word = await res.json();
-    word = word[0];
+    word = 'star wars background';
     res = await fetch('https://api.giphy.com/v1/gifs/random?tag=' + word + '&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My');
     res = await res.json();
     if (res.status >= 300)
@@ -99,13 +99,13 @@ const wordGif = async () => {
         img = document.createElement('img');
         img.src = res.data.images.original.url;
         document.querySelectorAll('main div')[1].appendChild(img);
-        let title = document.createTextNode(word);
+        let title = document.createTextNode(res.data.images.original.url);
         document.querySelectorAll('main div')[2].appendChild(title);
     }
     img = document.createElement('img');
     img.src = res.data.images.original.url;
     document.querySelectorAll('main div')[1].appendChild(img);
-    let title = document.createTextNode(word);
+    let title = document.createTextNode(res.data.images.original.url);
     document.querySelectorAll('main div')[2].appendChild(title);
 }
 

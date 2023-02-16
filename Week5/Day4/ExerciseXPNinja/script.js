@@ -122,3 +122,4 @@ setTimeout(parallelPromise, 1000)
 // resolve("fast");
 // console.log("slow promise is done");
 // resolve("slow");
+

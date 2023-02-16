@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    background-image: url('currencies-background.png');
+}
+
+main {
+    height: 90vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+form {
+    padding: 1px;
+    height: 80vh;
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    background-color: black;
+    opacity: 70%;
+}
+
+label {
+    color: white;
+    font-weight: bold;
+
+}
+
+select, input, button {
+    font-size: 1.5rem;
+}
+
+input {
+    text-align: right;
+}
+
+#convertBtn {
+    height: 3rem;
+    width: 10rem;
+}
+
+#switchBtn {
+    height: 5rem;
+    width: 5rem;
+    opacity: 100%;
+}
+
+img {
+    width: 100%;
+}
