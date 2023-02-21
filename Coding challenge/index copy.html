@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Idea Animation</title>
+    <style>
+      body {
+        width: 100%;
+        height: 95vh;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+
+      #letters {
+      }
+
+      .idea {
+        margin-right: 10rem;
+        opacity: 0;
+        color: yellow;
+        font-size: 9rem;
+        animation: reveal 2s ease-in-out forwards;
+        display: inline;
+      }
+
+      #a {
+        display: inline;
+        opacity: 0;
+        color: yellow;
+        font-size: 9rem;
+        animation: come-and-go 2s forwards;
+ 
+      }
+
+    #pos{
+        position: relative;
+        display: inline;
+    }
+
+      #point {
+        position: relative;
+        margin-left: -10px;
+        width: 3rem;
+        opacity: 1;
+        color: yellow;
+        font-size: 4rem;
+        animation: vanish 5s forwards;
+        visibility: hidden;
+      }
+
+      #green {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        visibility: hidden;
+        animation: appear 2s forwards;
+      }
+
+      #b {
+        display: inline;
+        height: 14rem;
+        opacity: 0;
+        color: yellow;
+        font-size: 8rem;
+        animation: reveal 2s ease-in-out forwards;
+        position: absolute;
+        left: 0;
+        top: -7.4rem;
+      }
+
+      img {
+        width: 150%;
+      }
+
+      @keyframes reveal {
+        0% {
+          /* width: 0; */
+          /* height: 0; */
+          opacity: 0;
+        }
+        50% {
+          /* width: 50%; */
+          /* height: 100%; */
+          opacity: 0.5;
+        }
+        100% {
+          /* width: 100%; */
+          /* height: 100%; */
+          opacity: 1;
+        }
+      }
+
+      @keyframes come-and-go {
+        0% {
+          /* width: 0; */
+          /* height: 0; */
+          opacity: 0;
+        }
+        50% {
+          /* width: 50%; */
+          /* height: 100%; */
+          opacity: 0.5;
+
+        }
+
+        99%{
+            opacity: 1;
+        }
+
+        100% {
+            width: 0px;
+          /* height: 100%; */
+        } 
+      }
+
+      @keyframes vanish {
+        0% {
+          /* width: 0; */
+          /* height: 0; */
+            /* opacity: 1; */
+            visibility: visible;
+        }
+
+        100% {
+            /* opacity: 0;; */
+          /* height: 100%; */
+          visibility: hidden;
+        } 
+      }
+
+      @keyframes appear {
+        0% {
+          /* width: 0; */
+          /* height: 0; */
+          visibility: hidden;
+          /* opacity: 0; */
+        }
+
+        100% {
+            visibility: visible;
+            /* opacity: 1;; */
+          /* height: 100%; */
+        } 
+      }
+
+      @keyframes grow_circle {
+        0% {
+          /* width: 0; */
+          /* height: 0; */
+            /* opacity: 1; */
+            visibility: visible;
+        }
+
+        100% {
+            /* opacity: 0;; */
+          /* height: 100%; */
+          clip-path:circle(50%);
+          background-color: transparent;
+        } 
+    }
+        @keyframes circle {
+  0% { position: fixed;
+    top: 500px;
+    left: 500px;
+     width: 50vw;
+    height: 50vh;
+    clip-path: circle(25%); }
+  50% {position: fixed;
+     width: 50vw;
+    height: 50vh;
+    top: 200px;
+    left: 200px;
+    clip-path: circle(50%); }
+  100% { clip-path: circle(100%);
+    top: 0px;
+    left: 0px;
+ }
+}
+
+
+      .idea:nth-child(2) {
+        animation-delay: 0.5s;
+      }
+      .idea:nth-child(3) {
+        animation-delay: 1s;
+      }
+      .idea:nth-child(4) {
+        animation-delay: 1.5s;
+      }
+      #a {
+        animation-delay: 2s;
+      }
+      #point {
+        animation-delay: 2.5s;
+      }
+      #green {
+        animation-delay: 3.5s;
+      }
+      #b {
+        animation-delay: 4.5s;
+      }
+
+      #icon {
+        animation-delay: 4s;
+      }
+
+            
+#icon::after {
+  content: "";
+  position: absolute;
+  inset:-5em;
+  clip-path:circle(0);
+  z-index: -1;
+  background: url(https://i.imgur.com/Yb4Uyux.png);
+  transition: all 0.2s ease-out;
+}
+
+#icon:hover::after {
+  clip-path:circle(50%);
+}
+
+#icon {
+  /* margin:5em; */
+  clip-path:circle(50%);
+  width:1em;
+  height:1em;
+  /* background-color: white; */
+  /* display:inline-block;
+  position:relative; */
+
+  background: url(https://i.imgur.com/Yb4Uyux.png);
+
+  animation: circle 1s ease-in-out forwards;
+  /* animation: grow_circle 2s forwards; */
+
+}
+
+ 
+    </style>
+  </head>
+  <body>
+    <div id="container">
+        <div id="point"><img src="red_button.png" alt=""><div id="green"><img src="green_button.png" alt=""></div></div>
+        <div id="letters">
+            <div class="idea">I</div>
+            <div class="idea">D</div>
+            <div class="idea">E</div>
+            <div id="pos"><span id="a">A</span><div id="b"><img src="lamp.png" alt=""><div id="icon"></div></div></div>    
+        </div>
+    
+    </div>
+  </body>
+</html>
