@@ -24,6 +24,7 @@
       }
 
       #letters {
+        display: flex;
       }
 
       .idea {
@@ -46,7 +47,11 @@
 
     #pos{
         position: relative;
+        width: 3rem;
+        height: 9rem;
         display: inline;
+        border: 2px solid green;
+
     }
 
       #point {
@@ -69,10 +74,9 @@
         animation: appear 1.5s forwards;
       }
 
-      #b {
+      #b, #a {
         display: inline;
         height: 20rem;
-        opacity: 0;
         color: yellow;
         font-size: 8rem;
         animation: reveal 2s ease-in-out forwards;
@@ -81,8 +85,12 @@
         top: -7.6rem;
       }
 
-      #b img {
-        width: 250%; 
+      #b {
+        opacity: 0;
+      }
+
+      #b img, #a img {
+        width: 300%; 
       }
 
       img {
@@ -235,7 +243,14 @@
             <div class="idea">I</div>
             <div class="idea">D</div>
             <div class="idea">E</div>
-            <div id="pos"><span id="a">A</span><div id="b"><img src="lamp.png" alt=""></div></div>    
+            <div id="pos">
+              <span id="a">
+                <img src="lamp_off.png" alt="">
+              </span>
+              <div id="b">
+                <img src="lamp_on.png" alt="">
+              </div>
+            </div>    
         </div>
     
     </div>

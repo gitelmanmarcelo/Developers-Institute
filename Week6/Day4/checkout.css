@@ -1,0 +1,37 @@
+#items {
+    width: 50vw;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+div {
+    border: 1px solid black;
+}
+
+.item_class,
+.price_class,
+.total_class,
+.total_price_class {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.item_class, .total_class {
+    text-align: left;
+}
+
+.price_class, .total_price_class {
+    text-align: right;
+}
+
+.total_class, .total_price_class {
+    font-size: 1.5rem;
+    border-top: double;
+}
+
+button {
+    width: 80px;
+    height: 30px;
+    margin-top: 10px;
+}
+
