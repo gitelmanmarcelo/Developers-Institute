@@ -13,8 +13,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        animation: body_animation 1s ease-in-out forwards;
+        animation: change_background 1s ease-in-out forwards;
         text-shadow: 2px black;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
       }
 
       #container {
@@ -23,43 +25,11 @@
         justify-content: flex-start;
       }
 
-      #letters {
-        display: flex;
-      }
-
-      .idea {
-        margin-right: 10rem;
-        opacity: 0;
-        color: yellow;
-        font-size: 9rem;
-        animation: reveal 2s ease-in-out forwards;
-        display: inline;
-      }
-
-      #a {
-        display: inline;
-        opacity: 0;
-        color: yellow;
-        font-size: 9rem;
-        animation: come-and-go 3s forwards;
- 
-      }
-
-    #pos{
-        position: relative;
-        width: 3rem;
-        height: 9rem;
-        display: inline;
-        border: 2px solid green;
-
-    }
-
       #point {
         position: relative;
         margin-left: -10px;
         width: 3rem;
         opacity: 1;
-        color: yellow;
         font-size: 4rem;
         animation: vanish 2.5s forwards;
         visibility: hidden;
@@ -74,44 +44,77 @@
         animation: appear 1.5s forwards;
       }
 
-      #b, #a {
-        display: inline;
-        height: 20rem;
-        color: yellow;
-        font-size: 8rem;
-        animation: reveal 2s ease-in-out forwards;
-        position: absolute;
-        left: 0;
-        top: -7.6rem;
+      #letters {
+        display: flex;
+        height: 50vh;
+                /* border: 2px solid green; */
+
       }
 
-      #b {
+      .idea {
+        margin-right: 10rem;
+        opacity: 0;
+        color: yellow;
+        font-size: 9rem;
+        animation: show_letter 2s ease-in-out forwards;
+        display: inline;
+      }
+
+      #pos{
+        position: relative;
+        width: 11rem;
+        height: 9rem;
+        display: inline;
+        /* border: 2px solid green; */
+    }
+
+      #lamp_off {
+        opacity: 0;
+        animation: come-and-go 3s forwards;
+      }
+
+
+      #lamp_on, #lamp_off {
+        display: inline;
+        height: 20rem;
+        animation: show_letter 2s ease-in-out forwards;
+        position: absolute;
+        left: 0;
+        top: -2rem;
+      }
+
+      #lamp_on {
         opacity: 0;
       }
 
-      #b img, #a img {
-        width: 300%; 
+      #lamp_on img, #lamp_off img {
+        width: 107%; 
       }
 
       img {
         width: 150%;
       }
 
+      #hand {
+        position: relative;
+      }
+
       i {
-        position: fixed;
+        position: absolute;
         color: white;
         visibility: hidden;
         font-size: 10rem;
-        top: 500px;
-        left: 345px;
+        top: -12vh;
+        left: -30px;
         animation: move_hand 1s forwards;
         z-index: 50;
       }
-      @keyframes body_animation {
+
+      @keyframes change_background {
         
         100% {
             background-image: url('background-ideas.jpg');
-            background-size: cover;
+            background-size:cover;
             z-index: 50;
         }
       }
@@ -119,42 +122,40 @@
       @keyframes move_hand {
         0% {
             visibility: visible;
-            top: 400px;        }
+            top: -16vh;        }
         10% {
-            top: 390px;
+            top: -19vh;
         }
         20% {
-            top: 380px;
+            top: -23vh;
         }
         30% {
-            top: 370px;
+            top: -27vh;
         }
         40% {
-            top: 360px;
+            top: -31vh;
         }
         50% {
-            top: 350px;
+            top: -34vh;
         }
         60% {
-            top: 340px;
+            top: -37vh;
         }
         70% {
-            top: 330px;
+            top: -41vh;
         }
         80% {
-            top: 310px;
+            top: -45vh;
         }
         90% {
-            top: 290px;
+            top: -48vh;
         }
         100% {
-            top: 270px;
+            top: -54vh;
         }
       }
 
-
-
-      @keyframes reveal {
+      @keyframes show_letter {
         0% {
           opacity: 0;
         }
@@ -211,7 +212,7 @@
       .idea:nth-child(4) {
         animation-delay: 1.5s;
       }
-      #a {
+      #lamp_off {
         animation-delay: 2.0s;
       }
       #point {
@@ -223,7 +224,7 @@
       #green {
         animation-delay: 4.6s;
       }
-      #b {
+      #lamp_on {
         animation-delay: 5s;
       }
       #big {
@@ -237,21 +238,23 @@
   <body>
     <div id = 'big'>
     <div id="container">
-        <i class="fa-regular fa-hand-pointer"></i>
         <div id="point"><img src="red_button.png" alt=""><div id="green"><img src="green_button.png" alt=""></div></div>
         <div id="letters">
             <div class="idea">I</div>
             <div class="idea">D</div>
             <div class="idea">E</div>
             <div id="pos">
-              <span id="a">
+              <span id="lamp_off">
                 <img src="lamp_off.png" alt="">
               </span>
-              <div id="b">
+              <div id="lamp_on">
                 <img src="lamp_on.png" alt="">
               </div>
             </div>    
         </div>
+      <div id="hand">
+        <i class="fa-regular fa-hand-pointer"></i>
+      </div>
     
     </div>
     </div>
