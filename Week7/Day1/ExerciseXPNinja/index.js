@@ -51,8 +51,6 @@ inquirer
 // Use the regular expression module to extract numbers from a string
 // Example
 
-
-
 const returnNumbers = (str) => {
   const regex = /\d+\.\d+|\d+/g;
   return str.match(regex).join('');
