@@ -27,8 +27,12 @@ printFullName({first: 'Elie', last:'Schoppik'});
 const keysAndValues = (obj) => {
     const entries = Object.entries(obj).sort((a,b) => a[0]-b[0]);
     
-    const a2 = Object.values(obj).sort((a,b) => a-b);
-    return [a1,a2];
+    const new_obj = Object.fromEntries(entries);
+
+    const keys = Object.keys(new_obj);
+    const values = Object.values(new_obj);
+
+    return [keys,values];
 };
 
 console.log(keysAndValues({ a: 1, b: 2, c: 3 }));
@@ -40,3 +44,29 @@ console.log(keysAndValues({ a: "Apple", b: "Microsoft", c: "Google" }));
 console.log(keysAndValues({ key1: true, key2: false, key3: undefined }));
 // ➞ [["key1", "key2", "key3"], [true, false, undefined]]
 
+// Exercise 3 : Counter Class
+// Instructions
+// Analyze the code below, what will be the output?
+
+class Counter {
+  constructor() {
+    this.count = 0;
+  }
+
+  increment() {
+    this.count++;
+  }
+}
+
+const counterOne = new Counter();
+counterOne.increment();
+counterOne.increment();
+
+const counterTwo = counterOne;
+counterTwo.increment();
+
+console.log(counterOne.count);
+
+// the result will be 3 because counter start=0 in the constructor, we incremented twice.
+// We make counterTwo = counterOne. It means they point to the same address in the heap, is the same object
+// when we increment counterTwo, counts becomes 3
