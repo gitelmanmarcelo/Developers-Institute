@@ -11,6 +11,8 @@ const onTitleSubmit = (evt) => {
     .then ( data => {
         console.log(data);
         document.documentElement.innerHTML = data;
+        document.forms[0].addEventListener('submit',onTitleSubmit);
+        document.forms[1].addEventListener('submit',onCategorySubmit);
     })
     .catch (err => {
         console.log('error:',err);
@@ -29,6 +31,8 @@ const onCategorySubmit = (evt) => {
     .then (res => res.text())
     .then ( data => {
         document.documentElement.innerHTML = data;
+        document.forms[0].addEventListener('submit',onTitleSubmit);
+        document.forms[1].addEventListener('submit',onCategorySubmit);
     })
     .catch (err => {
         console.log('error:',err);
