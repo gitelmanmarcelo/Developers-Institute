@@ -6,6 +6,7 @@
 
 body{
     background-color: #27455C; 
+    background-image: url('./img/potfolio-background.png');
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 1rem;
@@ -210,10 +211,22 @@ margin: 0;
   gap: 3rem;
 }
 
-.project_grid div{
+.project {
+  font-family: 'Rubik', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   height: 25vw;
   width: 25vw;
+  padding: 6px;
   background-color: white;
+  color: black;
+}
+
+.stack {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.8rem;
 }
 
 
@@ -252,4 +265,7 @@ margin: 0;
   color: #00adb5;
 }
 
+.contact_box a {
+  color: #00adb5;
+}
 
