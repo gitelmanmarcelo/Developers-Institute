@@ -1,0 +1,22 @@
+* {
+
+}
+
+.card {
+    display: flex;
+}
+
+.icon {
+
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+i {
+    color: orangered;
+}

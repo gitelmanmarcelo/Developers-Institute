@@ -229,15 +229,27 @@ margin: 0;
 .contact_grid {
   margin-bottom: 15vw;
   display: grid;
-  grid-template-columns: repeat(6,1fr);
-  gap: 3rem;
+  grid-template-columns: repeat(4,1fr);
+  gap: 2rem;
 }
 
-.contact_grid div{
-  height: 10vw;
-  width: 10vw;
-  background-color: white;
+.contact_box {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-between; */
+  font-size: 0.8rem;
 }
 
+.contact_box i {
+  font-size: 3rem;
+  color: #8fd5d8;
+  margin: 16px ;
+}
+
+.contact_box p {
+  color: #00adb5;
+}
 
 
