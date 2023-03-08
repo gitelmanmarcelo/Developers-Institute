@@ -5,11 +5,11 @@ function calculateTip() {
 
     // Create a variable called billAmount that fetches the value of the input, which id is billAmt (check the HTML file) 
 // –> It’s the amount of the bill.
-let billAmount = Number(document.querySelector('#billAmt').value);
+let billAmount = Number(document.querySelector('#billamt').value);
 
 // Create a variable called serviceQuality that fetches the value of the input, which id is serviceQual 
 // (check the HTML file) –> It’s the quality of the service.
-let serviceQuality = Number(document.querySelector('serviceQual').value);
+let serviceQuality = Number(document.querySelector('#serviceQual').value);
 
 // Create a variable called numberOfPeople that fetches the value of the input, which id is numOfPeople
 //  (check the HTML file) –> It’s the number of people sitting at the table.
@@ -37,7 +37,7 @@ let total = (( billAmount * serviceQuality ) / numberOfPeople).toFixed(2);
 document.querySelector('#totalTip').style.diplay = 'block';
 
 // Display the variable total in the tag which id is tip.
-document.querySelector('#tip').value = total.toString();
+document.querySelector('#tip').textContent = total.toString();
 }
 
 document.querySelector('#calculate').addEventListener('click',calculateTip);

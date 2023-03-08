@@ -1,12 +1,17 @@
-document.querySelector('#main').addEventListener('mousemove',onMousemove);
+
+const canvas = document.querySelector('canvas');
+const ctx = canvas.getContext('2d');
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
 
+canvas.addEventListener('mousemove', function(event) {
+  const rect = canvas.getBoundingClientRect();
+  const x = event.clientX - rect.left;
+  const y = event.clientY - rect.top;
 
-function onMousemove(e) {
-    // document.querySelector('#main').textContent = e.x + '  ' + e.y;
-    var canvas = document.getElementById("myCanvas");
-    var ctx = canvas.getContext("2d");
-    ctx.beginPath();
-    ctx.arc(95,50,40,0,2*Math.PI);
-    ctx.stroke();
-}
+  ctx.beginPath();
+  ctx.arc(x, y, 20, 0, Math.PI * 2);
+  ctx.stroke();
+});
