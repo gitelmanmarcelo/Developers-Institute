@@ -1,0 +1,7 @@
+input {
+    border: none;
+    border-bottom: 1px solid black;
+    height: 2rem;
+    width: 30vw;
+    background-color: transparent;
+}

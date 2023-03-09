@@ -1,0 +1,13 @@
+.pending, .done, .deleted {
+    border: 1px solid grey;
+    width: 65vh;
+    background-color: white;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+.deleted {
+    display: none;
+}

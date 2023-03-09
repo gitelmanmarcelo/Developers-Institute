@@ -1,0 +1,35 @@
+#header {
+    width: 100%;
+    /* height: 15vh; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+#titleDiv, #messageDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+#title {
+    font-size: 2rem;
+}
+
+#score {
+    width: 100%;
+    text-align: right;
+    font-size: 1.2rem;
+}
+
+#score p {
+    padding-right: 50px;
+}
+
+#messageDiv {
+    background-color: darkcyan;
+    font-size: 1.3rem;
+}

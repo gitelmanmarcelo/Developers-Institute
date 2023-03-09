@@ -1,0 +1,16 @@
+#card {
+    width: 15vw;
+    height: 40vh;
+    border: 1px solid grey;
+}
+
+img {
+    margin-top: 30px;
+    width: 75%;
+    height: 70%;
+    object-fit: cover;
+}
+
+p {
+    margin: 0;
+}
