@@ -1,19 +1,31 @@
 import './App.css';
-import Counter from './components/counter';
-import Parent from './Parent'
-import Child from './Child'
-import ErrorBoundary from './ErrorBoundary'
-import CounterHook from './components/CounterHook';
+import React from 'react';
+
+import Home from './components/home';
+import About from './components/about';
+import Contact from './components/contact';
+import {Routes, Route, Link} from 'react-router-dom';
 
 const App = () => {
   return (
     <>
-      <ErrorBoundary>
-        <Counter />
-      </ErrorBoundary>
-      <CounterHook/>
+      <nav>
+        <Link to='/'>Home</Link>
+        <Link to='/about'>About</Link>
+        <Link to='/c'>Contact</Link>
+      </nav>
+      <Routes>
+        <Route path='/' element={<Home/>} />
+        <Route path='about' element={
+        <>
+          <About/>
+          <Contact/>
+        </>
+        } />
+        <Route path='c' element={<Contact/>} />
+      </Routes>
     </>
-  )
+  )     
 }
 
 export default App;
