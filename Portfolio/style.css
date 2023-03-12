@@ -7,7 +7,8 @@
 body{
     background-color: #27455C; 
     background-image: url('./img/potfolio-background.png');
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Hind Madurai', sans-serif;
     font-weight: 400;
     font-size: 1rem;
     color: white;
@@ -30,6 +31,7 @@ body{
   
   .header__container{
     width: 100%;
+    height: 90%;
     /* background-color: red; */
     display: flex; 
     align-items: center;
@@ -38,10 +40,16 @@ body{
     /* /* padding-bottom: 30px; */
   }
 
+  .myName, .title {
+    font-family: 'Vazirmatn', sans-serif;
+    font-weight: 500;
+  }
+
   .myName {
     font-size: 2.5rem;
     color: white;
     margin-bottom: 0rem;
+    margin-top: 24px;
   }
   
   .title{
@@ -58,7 +66,7 @@ body{
     /* background-color: green; */
     display: flex;
     align-items: flex-end;
-    height: 18vh;
+    height: 17vh;
   }
 
   .menu__list{
@@ -81,21 +89,28 @@ body{
   .menu__link:hover{
     color: #00adb5; 
     }
-  
+
+/********** ALL SECTIONS ***************/
+
+    #portfolio, #about, #contact {
+      font-family: 'Vazirmatn', sans-serif;    font-weight: 500;
+      padding-top: 22vh;
+    }
+    
+    .section_title{
+      text-align: left;
+      margin-left: 10vw;
+      margin-bottom: 2vh;
+      font-size: 1.5rem;
+      color: #00adb5;
+    }
+
 
 /********** ABOUT ***************/
 
 section.about {
-  margin-top: 19vh;
   height: 100vh;
 }
-
-  .section_title{
-    text-align: left;
-    margin-left: 10vw;
-    font-size: 1.5rem;
-    color: #00adb5;
-  }
 
   .subtitle {
     color: #00adb5;
@@ -106,7 +121,6 @@ section.about {
     color:#8fd5d8;
     font-size: 1.1rem;
   }
-
 
   .about_image {
     margin-top: 1vh;
@@ -198,21 +212,23 @@ margin: 0;
 /********** PROJECT ***************/
 
 .projects_container {
-  margin-top: 1vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .project_grid {
-  margin-bottom: 15vw;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 3rem;
 }
 
 .project {
-  font-family: 'Rubik', sans-serif;
+  /* font-family: 'Rubik', sans-serif; */
+  font-family: 'Hind Madurai', sans-serif;
+  line-height: 1.6rem;
+  border-radius: 8px;
+  border: 2px solid #00adb5;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -220,7 +236,7 @@ margin: 0;
   height: 25vw;
   width: 25vw;
   padding: 6px;
-  background-color: white;
+  background-color: rgba(230, 230, 230, 0.753);
   color: black;
 }
 
@@ -233,7 +249,7 @@ margin: 0;
 /********** CONTACT ***************/
 
 .contact_container {
-  margin-top: 1vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -262,6 +278,9 @@ margin: 0;
 }
 
 .contact_box p {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
+  font-size: 1rem;
   color: #00adb5;
 }
 
