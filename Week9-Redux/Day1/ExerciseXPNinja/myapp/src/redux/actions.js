@@ -7,6 +7,7 @@ export const addToDo = (text) => {
 }
 
 export const toggleToDo = (index) => {
+    console.log('toffle')
     return {
         type : 'TOGGLE',
         payload : index
@@ -19,9 +20,9 @@ export const viewAll = () => {
     }
 }
 
-export const viewDone = () => {
+export const viewCompleted = () => {
     return {
-        type : 'VIEW_DONE'
+        type : 'VIEW_COMPLETED'
     }
 }
 

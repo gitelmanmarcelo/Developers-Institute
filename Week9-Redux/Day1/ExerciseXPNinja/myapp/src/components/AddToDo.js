@@ -16,7 +16,9 @@ const mapDispatchToProps = (dispatch) => {
     return {
         add : (e) => {
             e.preventDefault();
-            dispatch(addToDo(e.target.item.value));
+            const text = e.target.item.value;
+            e.target.item.value = "";
+            dispatch(addToDo(text));
         }
     }
 }

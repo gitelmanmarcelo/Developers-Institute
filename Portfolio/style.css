@@ -41,8 +41,10 @@ body{
   }
 
   .myName, .title {
-    font-family: 'Vazirmatn', sans-serif;
-    font-weight: 500;
+    font-family: 'Open Sans', sans-serif; font-weight: 500;
+
+    /* font-family: 'Vazirmatn', sans-serif;
+    font-weight: 500; */
   }
 
   .myName {
@@ -93,7 +95,8 @@ body{
 /********** ALL SECTIONS ***************/
 
     #portfolio, #about, #contact {
-      font-family: 'Vazirmatn', sans-serif;    font-weight: 500;
+      /* font-family: 'Vazirmatn', sans-serif;    font-weight: 500; */
+      font-family: 'Open Sans', sans-serif; font-weight: 500;
       padding-top: 22vh;
     }
     
