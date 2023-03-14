@@ -13,29 +13,7 @@ export const reducer =  (state = InitState, action = {}) => {
 
             return {...state,secondName : action.payload }
         case 'SUBMIT':
-            const options = {
-                method: 'GET',
-                headers: {
-                    'X-RapidAPI-Key': '5e5ab6c5e0mshcbe9fa99d64b85cp1f5a5cjsn4a8d898647c6',
-                    'X-RapidAPI-Host': 'love-calculator.p.rapidapi.com'
-                }
-            }
-            console.log('state before promise:',state);
-            fetch(
-               `https://love-calculator.p.rapidapi.com/getPercentage?sname=${state.firstName}&fname=${state.secondName}}`, options)
-            .then(response => response.json())
-            .then(response => { 
-            console.log('state iniside promise:',state);
-            const x = {...state};
-            return {...state,firstName: 'xuxuxuxxuxu', result: '*********'}
-            })
-            .catch(err => console.error(err));
-            // return state;
-            break;
-            // const res = await getData(state.firstName,state.secondName);
-            // console.log('state:',state);
-            // console.log('***res.result:',res.result);
-            
+            return {...state,result : action.payload }
         default:
             console.log('default')
         return state;

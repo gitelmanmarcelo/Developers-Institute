@@ -12,8 +12,9 @@ export const setSecondName = (name) => {
     }
 }
 
-export const submit = () => {
+export const submit = (response) => {
     return {
-        type : 'SUBMIT'
+        type : 'SUBMIT',
+        payload : response
     }
 }

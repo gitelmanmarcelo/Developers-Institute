@@ -4,12 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { transactionReducer } from "./reducers/transactionReducer";
+import thunk from 'redux-thunk'
 
-import { createStore } from "redux";
+import { createStore, applyMiddleware } from "redux";
 
 import { Provider } from "react-redux";
 
-const store = createStore(transactionReducer);
+import logger from 'redux-logger'
+import { my_logger } from './logger';
+
+const store = createStore(transactionReducer,applyMiddleware(my_logger,thunk));
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -2,11 +2,12 @@ import { connect } from 'react-redux';
 
 const Display = (props) => {
     console.log('props:',props)
-    console.log('props.result:',props.result)
+    const a = props.result.result
+    console.log('props.result:',a)
     return (
         <>
         <h1>Result:</h1>
-        <h2>{props.result}</h2>
+        <h2>{props.result.percentage}% - {props.result.result}</h2>
         </>
     )
 }
