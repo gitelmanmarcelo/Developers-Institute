@@ -1,3 +1,8 @@
+  overflow-y:scroll;
+
+
+ESQUECE DAQUI PRA BAIXO - SÓ O DE CIMA JÁ RESOLVE
+
 /* width */
 ::-webkit-scrollbar {
     width: 10px;

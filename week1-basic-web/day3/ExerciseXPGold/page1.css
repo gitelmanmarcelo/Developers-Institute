@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 10vh;
+    background-image: url('./background-pg1.jpg');
+    background-size: cover;
+    z-index: -1;
+}
+
+header {
+    width: 100vw;
+    height: 10vh;
+    background-color: transparent;
+
+}
+
+main {
+    width: 90vw;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    margin: 0 auto;
+    background-color: red;
+}
+
+.numberBox, .numberBox div {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+main .numberBox:first-of-type {
+    align-items:flex-end;
+}
+
+main .numberBox:nth-of-type(3) {
+    align-items:flex-start;
+}
+
+.bigNumber {
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(170, 78, 161);
+}
+
+.peopleBox {
+    padding: 6px;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.peopleBox div {
+    width: 100%;
+    text-align: center;
+}
+
+img {
+    width: 50%;
+    border-radius: 100%;
+    z-index: 2;
+}
