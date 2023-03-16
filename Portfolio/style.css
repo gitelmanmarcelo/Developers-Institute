@@ -89,7 +89,8 @@ body{
   }
 
   .menu__link:hover{
-    color: #00adb5; 
+    border-bottom: 5px solid #00adb5;
+    /* color: #00adb5;  */
     }
 
 /********** ALL SECTIONS ***************/
@@ -167,6 +168,7 @@ section.about {
   padding: 8px;
   margin: 0px;
   border-radius: 20px;
+  transition: ease-in-out 200ms;
 }
 
 #about_left div img {
@@ -203,6 +205,12 @@ margin: 0;
 #tools {
   margin-left: 0;
   margin-bottom: 0.5rem;
+}
+
+#about_left div:hover {
+  /* margin-right: 5px; */
+  width: 120px;
+  height: 120px;
 }
 
 
