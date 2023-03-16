@@ -1,8 +1,6 @@
 import { useParams } from "react-router-dom";
 import { connect } from "react-redux";
 import { deletePost } from "../actions/postActions";
-import image from './blog.png'
-
 
 
 const Post = (props) => {
@@ -12,7 +10,6 @@ const Post = (props) => {
     if (post)
         return (
             <>
-            <img src={image}/>
             <h1>{post.title}</h1>
             <p>{post.body}</p>
             <button onClick={() => {props.delete(id)}}>Delete</button>
@@ -35,7 +32,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        delete : (id) => {dispatch(deletePost(id))},
+        delete : (id) => {dispatch(deletePost(id))}
     }
 }
 

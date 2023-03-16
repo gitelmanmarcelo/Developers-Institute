@@ -14,8 +14,8 @@ export const rootReducer = (state=initState, action={}) => {
             const index = state.posts.findIndex(post => post.id === action.payload);
             const temp = [...state.posts];
             temp.splice(index,1);
-            return {...state, posts : temp};
-
+            console.log('temp:',temp)
+            return {...state,posts : temp}
         default: 
             return {...state};
     }
