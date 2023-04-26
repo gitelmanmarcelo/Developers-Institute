@@ -1,6 +1,0 @@
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-txt = document.createTextNode(urlParams.get('limit'));
-document.body.appendChild(txt);
-txt = document.createTextNode(urlParams.get('query'));
-document.body.appendChild(txt);

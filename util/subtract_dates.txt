@@ -1,7 +1,0 @@
-const calcDays = (dueDate) => {
-    const today = new Date();
-    const dateToSubtract = new Date(dueDate);
-    const differenceInMilliseconds = dateToSubtract.getTime() - today.getTime();
-    const differenceInDays = Math.floor(differenceInMilliseconds / (24 * 60 * 60 * 1000));
-    return differenceInDays; 
-}

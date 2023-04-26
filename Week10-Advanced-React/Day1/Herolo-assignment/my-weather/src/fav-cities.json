@@ -1,0 +1,49 @@
+[
+    {
+      "Name" : "Tel Aviv",
+      "WeatherText": "Mostly cloudy",
+      "WeatherIcon": 1,
+      "Temperature": {
+        "Metric": {
+          "Value": 10
+        }
+      }
+    },
+    {
+        "Name" : "Telanaipura",
+        "WeatherText": "texto 2",
+        "WeatherIcon": 2,
+        "Temperature": {
+          "Metric": {
+            "Value": 20
+          }
+        }
+      },{
+        "Name" : "Telok Blangah New Town",
+        "WeatherText": "texto 3",
+        "WeatherIcon": 3,
+        "Temperature": {
+          "Metric": {
+            "Value": 30
+          }
+        }
+      },{
+        "Name" : "Telford",
+        "WeatherText": "texto 4",
+        "WeatherIcon": 4,
+        "Temperature": {
+          "Metric": {
+            "Value": 40
+          }
+        }
+      },{
+        "Name" : "Telavi",
+        "WeatherText": "texto 5",
+        "WeatherIcon": 5,
+        "Temperature": {
+          "Metric": {
+            "Value": 50
+          }
+        }
+      }
+    ]

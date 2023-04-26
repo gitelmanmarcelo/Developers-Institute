@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+}
+
+main {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(92, 92, 230);
+}
+
+main img {
+    width: 10%;
+}
+
+#fiveContainer {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);    
+    gap: 20px;
+}
+
+
+.fiveBox {
+    height: 35vh;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(8, 8, 41);
+    color: white;
+}
+
+.fiveBox img {
+    width: 50%;
+}
+
+.favBox {
+    display: flex;
+    flex-direction: column;
+}

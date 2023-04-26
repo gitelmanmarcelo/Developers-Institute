@@ -1,2 +1,0 @@
-****** DAY OF WEEK
-SELECT TO_CHAR(event_datetime, 'Day') AS day_of_week FROM city_info 
