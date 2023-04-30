@@ -1,0 +1,2 @@
+Your API Key: f55b08278ec12ccd16591c3c
+Example Request: https://v6.exchangerate-api.com/v6/f55b08278ec12ccd16591c3c/latest/USD
